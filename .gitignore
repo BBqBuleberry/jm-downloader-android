@@ -1,0 +1,7 @@
+.venv/
+buildozer.spec.bak
+bin/
+.buildozer/
+__pycache__/
+*.pyc
+*.log
