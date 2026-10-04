@@ -22,8 +22,6 @@ android.ndk = 25b
 android.accept_sdk_license = True
 android.archs = arm64-v8a,armeabi-v7a
 
-android.p4a_branch = master
-
 p4a.branch = master
 p4a.bootstrap = sdl2
 
