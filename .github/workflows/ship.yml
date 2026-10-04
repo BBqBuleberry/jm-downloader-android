@@ -28,23 +28,12 @@ jobs:
             libtinfo5 cmake libffi-dev libssl-dev \
             automake build-essential ccache
 
-      - name: Shim cgi module globally
-        run: |
-          mkdir -p /tmp/cgi-shim
-          cp /usr/lib/python3.10/cgi.py /tmp/cgi-shim/cgi.py
-          echo "export PYTHONPATH=/tmp/cgi-shim:\$PYTHONPATH" >> ~/.bashrc
-          echo "export PYTHONPATH=/tmp/cgi-shim:\$PYTHONPATH" >> ~/.profile
-          echo "shim ready:"
-          ls -la /tmp/cgi-shim/
-
       - name: Install buildozer and pin cython
         run: |
-          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade pip
           python -m pip install "buildozer==1.5.0" "cython==0.29.33"
 
       - name: Build APK (debug)
-        env:
-          PYTHONPATH: /tmp/cgi-shim
         run: |
           buildozer -v android debug
 

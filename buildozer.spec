@@ -9,7 +9,7 @@ source.exclude_dirs = tests,bin,.github,.git,.venv
 
 version = 0.1.0
 
-requirements = python3,kivy==2.2.1,plyer,requests,urllib3,chardet,idna,certifi
+requirements = python3==3.11.9,kivy==2.2.1,plyer,requests,urllib3,chardet,idna,certifi
 
 orientation = portrait
 fullscreen = 0
